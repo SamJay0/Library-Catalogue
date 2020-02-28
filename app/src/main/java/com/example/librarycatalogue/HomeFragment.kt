@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.librarycatalogue.adapters.BookSectionAdapter
 import com.example.librarycatalogue.data.BookSection
 import com.example.librarycatalogue.databinding.FragmentHomeBinding
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-
-    private lateinit var bookSectionRecyclerView: RecyclerView
-
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
@@ -23,8 +23,8 @@ class HomeFragment : Fragment() {
         val binding: FragmentHomeBinding = DataBindingUtil.inflate(
                     inflater ,R.layout.fragment_home,container,false)
 
-        bookSectionRecyclerView.layoutManager = GridLayoutManager(this.context,2)
-        bookSectionRecyclerView.adapter = BookSectionAdapter(bookSectionList())
+        book_section_recycler_view.layoutManager = GridLayoutManager(this.context,2)
+        book_section_recycler_view.adapter = BookSectionAdapter(bookSectionList())
 
         return binding.root
 
