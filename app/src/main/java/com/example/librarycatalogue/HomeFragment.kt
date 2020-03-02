@@ -21,14 +21,19 @@ class HomeFragment : Fragment() {
         val binding: FragmentHomeBinding = DataBindingUtil.inflate(
                     inflater ,R.layout.fragment_home,container,false)
 
-        book_section_recycler_view.layoutManager = GridLayoutManager(this.context,2)
-        book_section_recycler_view.adapter = BookSectionAdapter(bookSectionList())
+        binding.bookSectionRecyclerView.layoutManager = GridLayoutManager(context,2)
+        binding.bookSectionRecyclerView.adapter = BookSectionAdapter(bookSectionList())
 
         return binding.root
 
     }
-   fun bookSectionList():List<BookSection>{
-       val book_sections= listOf<BookSection>(
+   private fun bookSectionList():List<BookSection>{
+       return listOf(
+           BookSection(R.drawable.comic),
+           BookSection(R.drawable.comic),
+           BookSection(R.drawable.comic),
+           BookSection(R.drawable.comic),
+           BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
@@ -36,7 +41,6 @@ class HomeFragment : Fragment() {
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic)
        )
-       return book_sections
    }
 
 
