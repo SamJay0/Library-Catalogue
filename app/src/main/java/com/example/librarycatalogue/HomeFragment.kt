@@ -30,16 +30,18 @@ class HomeFragment : Fragment() {
    private fun bookSectionList():List<BookSection>{
        return listOf(
            BookSection(R.drawable.comic),
-           BookSection(R.drawable.comic),
-           BookSection(R.drawable.comic),
-           BookSection(R.drawable.comic),
-           BookSection(R.drawable.comic),
-           BookSection(R.drawable.comic),
+           BookSection(R.drawable.math),
+           BookSection(R.drawable.science),
+           BookSection(R.drawable.programming),
+           BookSection(R.drawable.children),
+           BookSection(R.drawable.love),
+           BookSection(R.drawable.history),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic),
            BookSection(R.drawable.comic)
+
        )
    }
 
